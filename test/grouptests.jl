@@ -108,6 +108,8 @@ const START_TIME = time()
     @time include("gemm.jl")
 
     @time include("inner_reductions.jl")
+
+    @time include("promotion.jl")
   end
 
   @time if LOOPVECTORIZATION_TEST == "all" || LOOPVECTORIZATION_TEST == "part6"
